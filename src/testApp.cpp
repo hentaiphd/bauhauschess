@@ -69,10 +69,10 @@ void testApp::draw(){
         for (int row = 0; row < 8; row++) {
             for (int col = 0; col < 8; col++) {
                 if ( row % 2 == col % 2 ) {
-                    ofSetColor(179, 215, 255);
+                    ofSetColor(81, 38, 40);
                     ofFill();
                 } else {
-                    ofSetColor(61, 166, 204);
+                    ofSetColor(161, 94, 95);
                     ofFill();
                 }
                 ofRect(chessboardX[row], chessboardY[col], posZ, width, height);
@@ -86,13 +86,13 @@ void testApp::draw(){
         for (int row = 0; row < 8; row++) {
             for (int col = 0; col < 8; col++) {
                 if ( row % 2 == col % 2 ) {
-                    ofSetColor(179, 215, 255);
+                    ofSetColor(81, 38, 40);
                     ofFill();
                 } else {
                     ofEnableAlphaBlending();
-                    float color = ofMap(ofRandom(255), 100, sin(ofGetElapsedTimef()), 60, 70);
-                    float color1 = ofMap(ofRandom(255), 100, sin(ofGetElapsedTimef()), 170, 180);
-                    float color2 = ofMap(ofRandom(255), 100, sin(ofGetElapsedTimef()), 200, 210);
+                    float color = ofMap(ofRandom(255), 100, sin(ofGetElapsedTimef()), 155, 165);
+                    float color1 = ofMap(ofRandom(255), 100, sin(ofGetElapsedTimef()), 85, 95);
+                    float color2 = ofMap(ofRandom(255), 100, sin(ofGetElapsedTimef()), 94, 104);
                     ofSetColor(color,color1,color2,10);
                     ofFill();
                     ofDisableAlphaBlending();

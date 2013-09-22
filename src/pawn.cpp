@@ -13,10 +13,10 @@
 Pawn::Pawn(int triangle_x1, int triangle_y1, int triangle_x2, int triangle_y2, int triangle_x3, int triangle_y3, int height, int color){
     
     if (color == 1) {
-        ofSetColor(255, 218, 130);
+        ofSetColor(224, 185, 109);
         ofFill();
     } else if (color == 0) {
-        ofSetColor(163, 131, 255);
+        ofSetColor(16, 71, 83);
         ofFill();
     }
     
