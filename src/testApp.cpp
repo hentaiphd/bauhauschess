@@ -1,4 +1,6 @@
-#include "testApp.h"   
+#include "testApp.h" 
+#include "pawn.h"
+#include "otherpieces.h"
 
 float chessboardX[8];
 float chessboardY[8];
@@ -6,16 +8,23 @@ ofVec2f chessboard[8][8];
 float posX = 0;
 float posY = 0;
 int posZ = 0;
-float width = 800/8;
-float height = 850/9;
+float width = 700/8;
+float height = 750/9;
 
 //chesspiece
-int triangle_x1 = 0;
+int triangle_x1 = width;
 int triangle_y1 = 0;
-int triangle_x2 = width;
+int triangle_x2 = width+width;
 int triangle_y2 = height;
-int triangle_x3 = 0;
+int triangle_x3 = width;
 int triangle_y3 = 0;
+
+int triangle_x4 = width*6;
+int triangle_y4 = 0;
+int triangle_x5 = width*7;
+int triangle_y5 = height;
+int triangle_x6 = width*7;
+int triangle_y6 = 0;
 
 int movementX = width;
 int movementY = height;
@@ -69,9 +78,8 @@ void testApp::draw(){
                 ofRect(chessboardX[row], chessboardY[col], posZ, width, height);
             }
         }
-        ofSetColor(255, 218, 115);
-        ofFill();
-        ofTriangle(triangle_x1, triangle_y2, triangle_x2, triangle_y2, triangle_x3, triangle_y3);
+        Pawn(triangle_x1, triangle_y1, triangle_x2, triangle_y2, triangle_x3, triangle_y3, 750/9, 1);
+        Pawn(triangle_x4, triangle_y4, triangle_x5, triangle_y5, triangle_x6, triangle_y6, 750/9, 0);
     }
     
     if ( keypress == 1 ) {
@@ -93,12 +101,12 @@ void testApp::draw(){
             ofRect(chessboardX[row], chessboardY[col], posZ, width, height);
             }
         }
-        ofSetColor(255, 218, 115);
-        ofFill();
-        ofTriangle(triangle_x1, triangle_y2, triangle_x2, triangle_y2, triangle_x3, triangle_y3);
+        Pawn(triangle_x1, triangle_y1, triangle_x2, triangle_y2, triangle_x3, triangle_y3, 750/9, 1);
+        Pawn(triangle_x4, triangle_y4, triangle_x5, triangle_y5, triangle_x6, triangle_y6, 750/9, 0);
+        Others(chessboardX, chessboardY, width, height);
     }
     
-    
+    Others(chessboardX, chessboardY, width, height);
 }  
 
 //--------------------------------------------------------------
@@ -121,32 +129,6 @@ void testApp::keyPressed(int key){
 
 //--------------------------------------------------------------
 void testApp::keyReleased(int key){
-    if (key == 'd') {
-        keypress = 1;
-        pressedtime = ofGetElapsedTimef();
-        triangle_x1 += movementX;
-        triangle_x2 += movementX;
-        triangle_x3 += movementX;
-    } else if (key == 'a') {
-        keypress = 1;
-        pressedtime = ofGetElapsedTimef();
-        triangle_x1 -= movementX;
-        triangle_x2 -= movementX;
-        triangle_x3 -= movementX;
-    } else if (key == 'w') {
-        keypress = 1;
-        pressedtime = ofGetElapsedTimef();
-        triangle_y1 -= movementY;
-        triangle_y2 -= movementY;
-        triangle_y3 -= movementY;
-    } else if (key == 's') {
-        keypress = 1;
-        pressedtime = ofGetElapsedTimef();
-        triangle_y1 += movementY;
-        triangle_y2 += movementY;
-        triangle_y3 += movementY;
-    }
-    
 
 }
 

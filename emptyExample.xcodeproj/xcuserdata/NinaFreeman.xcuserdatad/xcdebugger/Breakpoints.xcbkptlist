@@ -8,12 +8,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/testApp.cpp"
-         timestampString = "401573891.06578"
+         timestampString = "401579854.220396"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "67"
-         endingLineNumber = "67"
+         startingLineNumber = "76"
+         endingLineNumber = "76"
          landmarkName = "testApp::draw()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/pawn.cpp"
+         timestampString = "401578492.850824"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "15"
+         endingLineNumber = "15"
+         landmarkName = "Pawn::Pawn(int triangle_x1, int triangle_y1, int triangle_x2, int triangle_y2, int triangle_x3, int triangle_y3, int height, int color)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
