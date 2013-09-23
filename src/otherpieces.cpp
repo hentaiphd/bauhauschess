@@ -25,6 +25,15 @@ Others::Others(float chessboardX[8], float chessboardY[8], float width, float he
     ofRect(chessboardX[0]+width/2-27.5, chessboardY[3]+height/2-27.5, 55, 55);
     ofRect(chessboardX[0]+width/2-27.5, chessboardY[4]+height/2-27.5, 55, 55);
     
+    //little boxes
+    ofSetColor(81, 38, 40);
+    ofFill();
+    ofRect(chessboardX[0]+width/2-5, chessboardY[3]+height/2-5, 10, 10);
+    ofSetColor(161, 94, 95);
+    ofFill();
+    ofRect(chessboardX[0]+width/2-5, chessboardY[4]+height/2-5, 10, 10);
+    //little boxes
+    
     ofSetColor(16, 71, 83);
     ofFill();
     ofRect(chessboardX[7]+width/2-10, chessboardY[7]+height/2-10, 20, 20);
@@ -38,4 +47,13 @@ Others::Others(float chessboardX[8], float chessboardY[8], float width, float he
     
     ofRect(chessboardX[7]+width/2-27.5, chessboardY[3]+height/2-27.5, 55, 55);
     ofRect(chessboardX[7]+width/2-27.5, chessboardY[4]+height/2-27.5, 55, 55);
+    
+    //little boxes
+    ofSetColor(81, 38, 40);
+    ofFill();
+    ofRect(chessboardX[7]+width/2-5, chessboardY[3]+height/2-5, 10, 10);
+    ofSetColor(161, 94, 95);
+    ofFill();
+    ofRect(chessboardX[7]+width/2-5, chessboardY[4]+height/2-5, 10, 10);
+    //little boxes
 }
